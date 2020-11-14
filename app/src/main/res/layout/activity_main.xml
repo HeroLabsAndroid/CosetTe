@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimaryDark"
+    android:padding="16dp"
+    tools:context=".MainActivity">
+
+    <EditText
+        android:id="@+id/resclassET"
+        android:layout_width="64sp"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:ems="10"
+        android:fontFamily="serif-monospace"
+        android:inputType="numberDecimal"
+        android:text="4"
+        android:textAlignment="center"
+        android:textColor="@color/colorText"
+        android:textSize="@dimen/txt_normal"
+        app:layout_constraintStart_toEndOf="@+id/resclassTV"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/resclassTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="serif-monospace"
+        android:text="@string/res_tv_txt"
+        android:textColor="@color/colorText"
+        android:textSize="32sp"
+        android:typeface="normal"
+        app:layout_constraintBottom_toBottomOf="@+id/resclassET"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/resclassET" />
+
+    <EditText
+        android:id="@+id/number1ET"
+        android:layout_width="64sp"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:fontFamily="serif-monospace"
+        android:inputType="numberDecimal"
+        android:text="8"
+        android:textAlignment="center"
+        android:textColor="@color/colorText"
+        app:layout_constraintEnd_toStartOf="@id/operatorPanel"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/number2ET" />
+
+    <EditText
+        android:id="@+id/number2ET"
+        android:layout_width="64sp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="64dp"
+        android:ems="10"
+        android:fontFamily="serif-monospace"
+        android:inputType="numberDecimal"
+        android:text="11"
+        android:textAlignment="center"
+        android:textColor="@color/colorText"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/operatorPanel"
+        app:layout_constraintTop_toBottomOf="@+id/resclassET" />
+
+    <TableLayout
+        android:id="@+id/operatorPanel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toStartOf="@+id/number2ET"
+        app:layout_constraintStart_toEndOf="@id/number1ET"
+        app:layout_constraintTop_toTopOf="@+id/number2ET">
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_horizontal">
+
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/plusFAB"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:clickable="true"
+                android:focusable="auto"
+                app:srcCompat="@drawable/plus" />
+
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/multFAB"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:clickable="true"
+                android:focusable="auto"
+                app:srcCompat="@drawable/multiply" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/floatingActionButton3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:clickable="true"
+                app:srcCompat="@drawable/division" />
+
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/floatingActionButton2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:clickable="true"
+                app:srcCompat="@drawable/minus" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/floatingActionButton5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:clickable="true"
+                app:srcCompat="@drawable/net_contents" />
+
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/floatingActionButton6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:clickable="true"
+                app:srcCompat="@drawable/notepad" />
+        </TableRow>
+
+    </TableLayout>
+
+    <TextView
+        android:id="@+id/outputTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:fontFamily="serif-monospace"
+        android:text="Result here"
+        android:textAlignment="center"
+        android:textColor="@color/colorText"
+        android:textSize="@dimen/txt_humungeos"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/operatorPanel" />
+
+    <TextView
+        android:id="@+id/detailTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:textColor="@color/colorText"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/outputTV" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/historyRV"
+        android:layout_width="0dp"
+        android:layout_height="256dp"
+        android:layout_marginTop="32dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.281"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/outputTV" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

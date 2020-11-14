@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <integer name="default_coset">4</integer>
+    <integer name="default_nr1">8</integer>
+    <integer name="default_nr2">11</integer>
+</resources>

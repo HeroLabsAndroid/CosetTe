@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/colorPrimaryDark">
+
+    <Button
+        android:id="@+id/set1btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:backgroundTint="@color/colorPrimary"
+        android:fontFamily="serif-monospace"
+        android:text="Set 1st"
+        android:textColor="@color/colorText" />
+
+    <EditText
+        android:id="@+id/lastResET"
+        android:layout_width="156dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:clickable="false"
+        android:ems="10"
+        android:focusable="auto"
+        android:fontFamily="serif-monospace"
+        android:inputType="textShortMessage"
+        android:text="no equation here"
+        android:textAlignment="center"
+        android:textColor="@color/colorText" />
+
+    <Button
+        android:id="@+id/set2btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:backgroundTint="@color/colorPrimary"
+        android:fontFamily="serif-monospace"
+        android:text="Set 2nd"
+        android:textColor="@color/colorText" />
+
+</LinearLayout>
